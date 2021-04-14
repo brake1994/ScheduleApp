@@ -1,5 +1,6 @@
 The database is no longer in use. This code is just used for demonstration purposes.
 
+ERD pdf file is included to show database structure.
 
 Title: GUI-based scheduling desktop application
 
