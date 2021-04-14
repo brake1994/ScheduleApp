@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="627.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ReportsController">
+   <children>
+      <TabPane prefHeight="574.0" prefWidth="748.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="reportOneTab" text="Report 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="198.0" layoutY="78.0" text="Select Month:">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label layoutX="198.0" layoutY="14.0" text="Amount Of Appointment Types By Month">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <ComboBox fx:id="monthComboBox" layoutX="300.0" layoutY="75.0" onAction="#filterListView" prefWidth="150.0" />
+                        <ListView fx:id="listView" editable="true" layoutX="218.0" layoutY="123.0" prefHeight="312.0" prefWidth="314.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="reportTwoTab" text="Report 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="576.0" prefWidth="780.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="96.0" prefHeight="400.0" prefWidth="722.0">
+                          <columns>
+                            <TableColumn fx:id="appointmentIDColumn" prefWidth="75.0" text="Appointment ID" />
+                              <TableColumn fx:id="startDateTimeColumn" prefWidth="75.0" text="Start Date/Time" />
+                              <TableColumn fx:id="endDateTimeColumn" prefWidth="75.0" text="End Date/Time" />
+                            <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="typeColumnTwo" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="customerIDColumn" prefWidth="75.0" text="Customer ID" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="301.5" layoutY="14.0" text="Contact Schedule">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="contactComboBox" layoutX="300.0" layoutY="58.0" onAction="#filterTableView" prefWidth="150.0" />
+                        <Label layoutX="179.0" layoutY="61.0" text="Select a Contact: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="reportThreeTab" text="Report 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart fx:id="barChart" layoutX="106.0" layoutY="40.0" legendVisible="false" prefHeight="449.0" prefWidth="538.0" title="Appointment Start Hour Occurence (Local Time)">
+                          <xAxis>
+                            <CategoryAxis prefHeight="53.0" prefWidth="449.0" side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" upperBound="50.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="645.0" layoutY="587.0" mnemonicParsing="false" onAction="#returnToDashboard" text="Dashboard" />
+   </children>
+</AnchorPane>

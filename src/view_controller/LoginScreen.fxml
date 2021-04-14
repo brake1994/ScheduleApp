@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.LoginScreenController">
+   <children>
+      <HBox layoutX="62.0" layoutY="115.0" prefHeight="131.0" prefWidth="458.0">
+         <children>
+            <VBox prefHeight="131.0" prefWidth="216.0">
+               <children>
+                  <Label fx:id="usernameLabel" alignment="TOP_RIGHT" prefHeight="35.0" prefWidth="210.0" text="Username:" textOverrun="CLIP" underline="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="passwordLabel" alignment="TOP_RIGHT" prefHeight="32.0" prefWidth="210.0" text="Password:" textOverrun="CLIP" underline="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="141.0" prefWidth="242.0">
+               <children>
+                  <TextField fx:id="usernameField" minHeight="-Infinity" prefHeight="35.2">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passwordField" minHeight="-Infinity" prefHeight="35.2" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="loginButtonLabel" layoutX="441.0" layoutY="246.0" mnemonicParsing="false" onAction="#loginButtonAction" text="Log-in" />
+      <HBox layoutX="288.0" layoutY="7.0" prefHeight="71.0" prefWidth="304.0">
+         <children>
+            <Label fx:id="locationLabel" text="Location:" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="displayLocationLabel" prefHeight="27.0" prefWidth="219.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="21.0" layoutY="263.0" prefHeight="118.0" prefWidth="344.0">
+         <children>
+            <Label fx:id="errorLabel2" prefHeight="35.0" prefWidth="364.0" text="Label" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel1" prefHeight="35.0" prefWidth="267.0" text="Label" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
