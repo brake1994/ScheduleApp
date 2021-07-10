@@ -1,4 +1,9 @@
-The database is no longer in use. This code is just used for demonstration purposes.
+My second java project.
+
+Include the JVM arguments below in run configuration.
+*note ${PATH_TO_FX} should be replaced with your machine's JavaFX folder path
+
+JVM runtime arguments: --module-path ${PATH_TO_FX} --add-modules=javafx.controls,javafx.fxml
 
 ERD pdf file is included to show database structure.
 
