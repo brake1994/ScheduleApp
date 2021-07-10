@@ -45,15 +45,15 @@ public class Main extends Application {
      * @param args Unused
      */
     public static void main(String[] args) {
-        //DatabaseConnection.startDatabaseConnection();
+        DatabaseConnection.startDatabaseConnection();
 
-//        AppointmentDatabase.createWeekList();
-//        AppointmentDatabase.parseWeekForFilter();
-//        AppointmentDatabase.createMonthList();
-//        AppointmentDatabase.getAllAppointmentsFromDatabase();
+        AppointmentDatabase.createWeekList();
+        AppointmentDatabase.parseWeekForFilter();
+        AppointmentDatabase.createMonthList();
+        AppointmentDatabase.getAllAppointmentsFromDatabase();
 
         launch(args);
 
-        //DatabaseConnection.closeConnection();
+        DatabaseConnection.closeConnection();
     }
 }

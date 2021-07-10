@@ -14,7 +14,7 @@ public class DatabaseConnection {
     //JDBC URL components
     private static final String protocol = "JDBC";
     private static final String vendorName = ":mysql:";
-    private static final String serverName = "removed!";
+    private static final String serverName = "//wgudb.ucertify.com/WJ07LMF";
 
     //concat to create JDBC URL
     private static final String jdbcUrl= protocol + vendorName + serverName;
@@ -24,10 +24,10 @@ public class DatabaseConnection {
     private static Connection connection = null;
 
     //Username
-    private static String username = "removed!";
+    private static String username = "U07LMF";
 
     //Password
-    private static String password = "removed!";
+    private static String password = "53689059476";
 
     /**
      * Connect to database.
